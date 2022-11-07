@@ -33,11 +33,17 @@ class App extends Component {
   };
 
   showModal = (e) => {
-    console.log(e)
+     if (e.code === 'Escape') {
+      this.setState({ souModal: false })
+    }
     if (e.target === e.currentTarget) {
       this.setState({ souModal: false })
     }
   };
+
+  componentWillUnmount() {
+     window.removeEventListener('keydown', this.showModal);
+  }
 
   componentDidUpdate(prevProps, prevState) {
     const { page, name} = this.state;
@@ -87,7 +93,6 @@ class App extends Component {
 
   render() {
     const { articles, imgModal, souModal, loader, erorr} = this.state;
-    console.log(articles)
     return (
       <div className={css.gallery}>
         <Searchbar get={this.getName} clearPrevious={this.clearPreviousRequest} />

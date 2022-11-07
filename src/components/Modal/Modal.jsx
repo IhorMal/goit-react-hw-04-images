@@ -3,6 +3,9 @@ import css from "./Modal.module.css"
 import React, { Component } from 'react'
 
 class Modal extends Component {
+
+    componentDidMount() {
+    window.addEventListener('keydown', this.props.closModal);}
     render() {
         return (
         <div className={css.background} onClick={this.props.closModal}>
