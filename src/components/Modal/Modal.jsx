@@ -13,14 +13,5 @@ class Modal extends Component {
         )
     }
 };
-// export const Modal = ({ imgModal }) => {
-//     return (
-//         <div className={css.background} >
-//             <div className={css.modal}>
-//                 <img src={imgModal} width='700px' alt="foto" />
-//             </div>
-//         </div>
-//     )
-// };
 
 export {Modal}

@@ -13,7 +13,6 @@ class Searchbar extends Component {
         
     };
 
-   
     changeImg = (e) => {
         this.setState({ name: e.target.value })
     }
