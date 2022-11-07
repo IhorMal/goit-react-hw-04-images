@@ -5,6 +5,10 @@ class Searchbar extends Component {
    
     addNameImg = (e) => {
         e.preventDefault()
+        if (e.target.name.value === '') {
+            alert('Please enter a name')
+            return 
+        }
         this.props.get(e.target.name.value)
         e.target.reset()  
     };

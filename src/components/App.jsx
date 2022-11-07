@@ -26,7 +26,7 @@ class App extends Component {
 
   getName = (value) => {
     if (value !== this.state.name) {
-      this.setState({ name: value, articles: []})
+      this.setState({ name: value, articles: [], page: 1})
     }
     
   };
@@ -61,6 +61,7 @@ class App extends Component {
     this.setState({ loader: true })
 
     this.addApi(name, page).then(respons => { 
+      
       if (respons.data.hits.length === 0 ) {
         return Promise.reject(new Error(`There is nothing by that name ${name}`));
       }    
