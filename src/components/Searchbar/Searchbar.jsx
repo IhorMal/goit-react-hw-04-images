@@ -2,20 +2,12 @@ import React, { Component } from 'react'
 import css from './Searchbar.module.css'
 
 class Searchbar extends Component {
-    state = {
-        name: '',
-    };
-
+   
     addNameImg = (e) => {
         e.preventDefault()
-        this.props.get(this.state.name)
-        e.target.reset()
-        
+        this.props.get(e.target.name.value)
+        e.target.reset()  
     };
-
-    changeImg = (e) => {
-        this.setState({ name: e.target.value })
-    }
 
     render() {
         return (
@@ -29,6 +21,7 @@ class Searchbar extends Component {
                         onChange={this.changeImg}
                         className={css.input}
                         type="text"
+                        name='name'
                         autoComplete="on"
                         autoFocus
                         placeholder="Search images and photos"

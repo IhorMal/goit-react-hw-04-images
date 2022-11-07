@@ -25,7 +25,10 @@ class App extends Component {
   }
 
   getName = (value) => {
-    this.setState({ name: value, articles: []})
+    if (value !== this.state.name) {
+      this.setState({ name: value, articles: []})
+    }
+    
   };
 
   addApi = async (name, page) => {
@@ -46,7 +49,7 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { page, name} = this.state;
+    const { page, name, } = this.state;
     
     if (prevState.page !== page || prevState.name !== name) {
      this.renderGallery()
