@@ -71,8 +71,7 @@ class App extends Component {
       }))
     
     }).catch(erorr => {
-      this.setState({ erorr })
-
+      this.setState({ erorr, loader: false})
     })
   };
 
