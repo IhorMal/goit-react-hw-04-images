@@ -1,0 +1,28 @@
+.searchbar {
+  padding: 15px 0px;
+  background-color: blue;
+}
+.form {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  margin: 0 auto;
+}
+
+.button {
+  position: absolute;
+
+  border: none;
+  outline: none;
+  background-color: rgb(245, 174, 174);
+  height: 100%;
+  font-size: 17px;
+}
+.input {
+  width: 200px;
+  padding: 0px 0px 0px 70px;
+  height: 28px;
+  border: none;
+  outline: none;
+}
