@@ -1,8 +1,4 @@
 import css from "./Modal.module.css"
-
-import React, { Component } from 'react'
-
-
 export const Modal = ({closModal, imgModal}) => {
 
     window.addEventListener('keydown', closModal);
@@ -14,7 +10,6 @@ export const Modal = ({closModal, imgModal}) => {
          </div>
         )
 }
-
 
 
 // class Modal extends Component {
